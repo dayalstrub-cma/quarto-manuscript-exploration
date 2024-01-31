@@ -1,5 +1,3 @@
-## A Quarto Manuscript Template
+## Quarto Manuscript Exploration
 
-This is a template repo for generating a manuscript from Quarto that accompanies the tutorial at: [Quarto Manuscripts: Jupyter Lab](https://quarto.org/docs/manuscripts/authoring/jupyterlab.html)
-
-
+Playing about with Quarto manuscripts. Trying to split the article/manuscript computations (and text) into separate notebooks using include, etc.
