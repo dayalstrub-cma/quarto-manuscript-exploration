@@ -4,11 +4,8 @@ project:
 format:
   html:
     toc: true
-    comments:
-      hypothesis: true
   docx: default
-  jats: default
-  agu-pdf: default
+  pdf: default
 
-
-
+execute:
+  freeze: auto  # re-render only when source changes

@@ -1,0 +1,40 @@
+---
+jupyter:
+  jupytext:
+    text_representation:
+      extension: .qmd
+      format_name: quarto
+      format_version: '1.0'
+      jupytext_version: 1.16.1
+  kernelspec:
+    display_name: Python 3.12
+    language: python
+    name: py312
+---
+
+## Introduction
+
+```{python}
+import matplotlib.pyplot as plt
+import numpy as np
+eruptions = [1492, 1585, 1646, 1677, 1712, 1949, 1971, 2021]
+```
+
+```{python}
+#| label: fig-timeline
+#| fig-cap: Timeline of recent earthquakes on La Palma
+#| fig-alt: An event plot of the years of the last 8 eruptions on La Palma.
+
+plt.figure(figsize=(6, 1))
+plt.eventplot(eruptions, lineoffsets=0, linelengths=0.1, color='black')
+plt.gca().axes.get_yaxis().set_visible(False)
+plt.ylabel('')
+plt.show()
+```
+
+```{python}
+#| output: false
+avg_years_between_eruptions = round(np.mean(np.diff(eruptions[:-1])), 2)
+```
+
+Based on data up to and including 1971, eruptions on La Palma happen every `{python} avg_years_between_eruptions` years on average.
